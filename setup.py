@@ -182,7 +182,7 @@ def get_tesseract_version():
         if version == '':
             version = _read_string(stdout_version).strip()
 
-        version_match = re.search(r'^tesseract ((?:\d+\.)+\d+).*', version, re.M)
+        version_match = re.search(r'^tesseract v((?:\d+\.)+\d+).*', version, re.M)
         if version_match:
             version = version_match.group(1)
         else:
